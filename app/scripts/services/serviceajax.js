@@ -9,15 +9,18 @@
  */
 angular.module('coursExoApp')
   .factory('serviceAjax', function ($http, $q) {
-    return{
-        search: function(query, page){
-            return $http.get("http://localhost:3000/search?q=" + query + "&page=" + page);
-        },
-        info: function(id){
-            return $http.get("http://localhost:3000/info/" + id);
-        },
-        popular: function(page){
-            return $http.get("http://localhost:3000/popular?page=" + page);
-        }
+    return {
+      search: function (query, page) {
+        return $http.get("http://localhost:3000/search?q=" + query + "&page=" + page);
+      },
+      info: function (id) {
+        return $http.get("http://localhost:3000/info/" + id);
+      },
+      popular: function (page) {
+        return $http.get("http://localhost:3000/popular?page=" + page);
+      },
+      similar: function (id) {
+        return $http.get("http://localhost:3000/similar/" + id);
+      }
     }
   });
