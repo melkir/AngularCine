@@ -34,10 +34,6 @@ angular
         templateUrl: 'views/similar.html',
         controller: 'SimilarCtrl'
       })
-      .when('/populartv', {
-        templateUrl: 'views/populartv.html',
-        controller: 'PopulartvCtrl'
-      })
       .otherwise({
         redirectTo: '/popular'
       });
