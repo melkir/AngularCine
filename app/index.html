@@ -8,7 +8,7 @@
   <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
   <!-- build:css(.) styles/vendor.css -->
   <!-- bower:css -->
-  <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
+  <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css"/>
   <!-- endbower -->
   <!-- endbuild -->
   <!-- build:css(.tmp) styles/main.css -->
@@ -16,19 +16,7 @@
   <link rel="stylesheet" href="styles/my_style.css">
   <!-- endbuild -->
 </head>
-<nav class="navbar navbar-default navbar-static-top">
-  <div class="container">
-    <div class="navbar-header">
-      <a class="navbar-brand" href="#">CineAngular</a>
-    </div>
-    <div>
-      <ul class="nav navbar-nav">
-        <li class="active"><a href="#">Film</a></li>
-        <li><a href="#">Série TV</a></li>
-      </ul>
-    </div>
-  </div>
-</nav>
+
 <body ng-app="coursExoApp">
 <!--[if lt IE 7]>
 <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade
@@ -38,6 +26,9 @@
 <!-- Add your site or application content here -->
 <div class="container">
   <div class="header">
+    <ul class="nav nav-pills pull-right">
+      <li class="active"><a ng-href="#">Films populaires</a></li>
+    </ul>
     <h3 class="text-muted">Le cinéma avec Angular</h3>
 
     <div class="row">
@@ -45,8 +36,7 @@
         <div class="input-group">
           <input ng-model="query" type="text" class="form-control" placeholder="Le loup de Wall-Street, Django...">
           <span class="input-group-btn">
-            <button type="submit" class="btn btn-default glyphicon glyphicon-search" type="button"
-                    ng-click="searchAction()"></button>
+            <button class="btn btn-default glyphicon glyphicon-search" type="submit" ng-click="searchAction()"></button>
           </span>
         </div>
       </form>

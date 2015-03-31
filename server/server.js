@@ -39,15 +39,6 @@ app.get('/info/:id', function (req, res) {
   });
 });
 
-app.get('/tv/popular', function (req, res) {
-  var page = (req.query["page"]) ? req.query["page"] : 1;
-  page = (req.query["page"] > 1000) ? 1000 : req.query["page"];
-  mdb.miscPopularSeries({page: page}, function (err, data) {
-    data.total_pages = 1000;
-    res.send(data)
-  });
-});
-
 app.listen(3000, function () {
   console.log("Listening 3000")
 });
