@@ -31,7 +31,6 @@ angular
         controller: 'AboutCtrl'
       })
       .when('/similar/:id', {
-        templateUrl: 'views/similar.html',
         controller: 'SimilarCtrl'
       })
       .otherwise({
