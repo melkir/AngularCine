@@ -21,6 +21,12 @@ angular.module('coursExoApp')
       },
       similar: function (id) {
         return $http.get("http://localhost:3000/similar/" + id);
+      },
+      titles: function (id) {
+        return $http.get("http://localhost:3000/titles/" + id);
+      },
+      trailers: function(id) {
+        return $http.get("http://localhost:3000/trailers/" + id)
       }
     }
   });

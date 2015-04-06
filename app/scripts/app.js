@@ -30,9 +30,6 @@ angular
         templateUrl: 'views/about.html',
         controller: 'AboutCtrl'
       })
-      .when('/similar/:id', {
-        controller: 'SimilarCtrl'
-      })
       .otherwise({
         redirectTo: '/popular'
       });

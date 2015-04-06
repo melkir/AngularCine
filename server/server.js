@@ -39,6 +39,21 @@ app.get('/info/:id', function (req, res) {
   });
 });
 
+app.get('/titles/:id', function (req, res) {
+  var id = req.params.id;
+  mdb.movieAlternativeTitles({id: id}, function (err, data) {
+    res.send(data);
+  });
+});
+
+app.get('/trailers/:id', function(req, res) {
+  var id = req.params.id;
+  mdb.movieTrailers({id: id}, function (err, data) {
+    console.log(data);
+    res.send(data);
+  });
+});
+
 app.listen(3000, function () {
   console.log("Listening 3000")
 });

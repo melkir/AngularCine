@@ -13,7 +13,6 @@ angular.module('coursExoApp')
     $scope.loading = true;
     $scope.infoMovie = function () {
       serviceAjax.info(id).success(function (data) {
-        $scope.loading = false;
         $scope.movie = data;
       })
     };
@@ -29,5 +28,21 @@ angular.module('coursExoApp')
     };
 
     $scope.similarMovie();
+
+    $scope.alternativeTitles = function () {
+      serviceAjax.titles(id).success(function (data) {
+        $scope.altTitles = data;
+      })
+    };
+
+    $scope.alternativeTitles();
+
+    $scope.trailers = function () {
+      serviceAjax.trailers(id).success(function (data) {
+        $scope.trailers = data;
+      })
+    };
+
+    $scope.trailers();
 
   });
