@@ -46,10 +46,9 @@ app.get('/titles/:id', function (req, res) {
   });
 });
 
-app.get('/trailers/:id', function(req, res) {
+app.get('/trailers/:id', function (req, res) {
   var id = req.params.id;
   mdb.movieTrailers({id: id}, function (err, data) {
-    console.log(data);
     res.send(data);
   });
 });

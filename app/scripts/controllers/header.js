@@ -8,9 +8,9 @@
  * Controller of the coursExoApp
  */
 angular.module('coursExoApp')
-    .controller('HeaderCtrl', function ($scope, $location) {
-        $scope.query = "";
-        $scope.searchAction = function(){
-            $location.path("/search/" + $scope.query);
-        }
-    });
+  .controller('HeaderCtrl', function ($scope, $location) {
+    $scope.query = "";
+    $scope.searchAction = function () {
+      $location.path("/search/" + $scope.query);
+    }
+  });

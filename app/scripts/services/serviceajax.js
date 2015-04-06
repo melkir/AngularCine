@@ -25,7 +25,7 @@ angular.module('coursExoApp')
       titles: function (id) {
         return $http.get("http://localhost:3000/titles/" + id);
       },
-      trailers: function(id) {
+      trailers: function (id) {
         return $http.get("http://localhost:3000/trailers/" + id)
       }
     }
